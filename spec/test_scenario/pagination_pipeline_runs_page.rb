@@ -3,7 +3,7 @@ require 'securerandom'
 random_string = SecureRandom.hex
 
 feature 'TrueAutomation.IO capybara example' do
-  scenario 'EC flow - pagination' do
+  scenario 'EC flow - pagination pipeline runs page' do
     visit 'https://ectest.trueautomation.io/flow'
     size10 = "//div[@class='pagination__page-size-select at-pagination__page-size-select']/span[text()='10']"
     size20 = "//div[@class='pagination__page-size-select at-pagination__page-size-select']/span[text()='20']"
