@@ -3,7 +3,7 @@ require 'securerandom'
 random_string = SecureRandom.hex
 
 feature 'TrueAutomation.IO capybara example' do
-  scenario 'EC flow - create new env' do
+  scenario 'EC flow - create new servise' do
     visit 'https://ectest.trueautomation.io/flow'
 
     # login

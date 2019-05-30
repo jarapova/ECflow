@@ -30,7 +30,7 @@ RSpec.configure do |config|
 
   Capybara.configure do |capybara|
     capybara.run_server = false
-    capybara.default_max_wait_time = 5
+    capybara.default_max_wait_time = 10
 
     capybara.default_driver = :true_automation_driver
   end
