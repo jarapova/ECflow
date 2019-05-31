@@ -37,10 +37,11 @@ feature 'TrueAutomation.IO capybara example' do
     # find(:xpath, "//div[@class='at-select-header-title ec-select-header-title']").click
 
     sleep 3
+
     # find(ta('EC:picker:content:defaultProj')).click
     # find(ta('EC:content:defaultProj')).click
-    find(:xpath, ta('EC:content:defaultProj', "(//div[@title='Default'])[6]")).click
-    # find(:xpath, "(//div[@title='Default'])[6]").click
+    find(:xpath, ta('EC:content:defaultProj',"//div[@class='ec-project-select-picker__project-options']//div[text()='Default']")).click
+    # find(:xpath, "//div[@class='ec-project-select-picker__project-options']//div[text()='Default']").click
 
     # find(ta('EC:picker:content:okBtn')).click
     # find(ta('EC:content:okBtn')).click

@@ -6,12 +6,13 @@ feature 'TrueAutomation.IO capybara example' do
   scenario 'EC flow - tags for project' do
     visit 'https://ectest.trueautomation.io/flow'
 
-# login
+    # login
     find(:xpath, "//input[@id='username']").set('admin')
     find(:xpath, "//input[@id='password']").set('changeme')
     find(:xpath, "//button[text()='Login']").click
-#
-     sleep 3
+
+    sleep 3
+
     # find(ta('EC:picker:content:humburg')).click
     # find(ta('EC:content:humburg')).click
     find(:xpath, ta('EC:content:humburg', "//div[@class='at-main-menu-btn ch-icon-container menu']")).click
@@ -21,7 +22,9 @@ feature 'TrueAutomation.IO capybara example' do
     # find(ta('EC:content:projects')).click
     find(:xpath, ta('EC:content:projects', "//a[@class='black-link nav-menu-category__item at-main-menu-projects']")).click
     # find(:xpath, "//a[@class='black-link nav-menu-category__item at-main-menu-projects']").click
-sleep 2
+
+    sleep 2
+
     # find(ta('EC:picker:content:showInfoIcon')).click
     # find(ta('EC:content:showInfoIcon')).click
     find(:xpath, ta('EC:content:showInfoIcon', "(//div[@class='object__desc object__button at-project-list-item-show-info'])[1]")).click

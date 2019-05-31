@@ -26,7 +26,7 @@ feature 'TrueAutomation.IO capybara example' do
     # find(ta('EC:picker:headerNav:sysAdminBtn')).click
     # find(ta('EC:headerNav:sysAdminBtn')).click
     find(:xpath, ta('EC:headerNav:sysAdminBtn', "//span[@class='username']")).click
-    # find(:xpath, "//button[@class='username']").click
+    # find(:xpath, "//span[@class='username']").click
 
     # find(ta('EC:picker:headerNav:logout')).click
     # find(ta('EC:headerNav:logout')).click

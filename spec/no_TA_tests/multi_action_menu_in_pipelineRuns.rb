@@ -3,7 +3,7 @@ require 'securerandom'
 random_string = SecureRandom.hex
 
 feature 'TrueAutomation.IO capybara example' do
-  scenario 'EC flow - navigating in hunmburg menu' do
+  scenario 'EC flow - Navigate to pipeline runs multi action mEnu' do
     visit 'https://ectest.trueautomation.io/flow'
 
     # login
@@ -17,19 +17,23 @@ feature 'TrueAutomation.IO capybara example' do
 
     find(:xpath, "//a[@class='black-link nav-menu-category__item at-main-menu-pipeline_runs']").click
 
-    find(:xpath, "//div[@class='at-main-menu-btn ch-icon-container menu']").click
+    sleep 3
+
+    find(:xpath, "(//div[@class='sub-object__action sub-object__action--no-overlay sub-object__button'])[2]").click
+
+    find(:css, ".at-item-2").click
+
+    find(:css, ".properties-header__close").click
+
+    find(:xpath, "(//div[@class='sub-object__action sub-object__action--no-overlay sub-object__button'])[2]").click
+
+    find(:css, ".at-item-4").click
+
+    sleep 2
+
+    find(:css, ".at-history-close").click
 
     sleep 3
 
-    find(:xpath, "//a[@class='black-link nav-menu-category__item at-main-menu-environments']").click
-
-    find(:xpath, "//div[@class='at-main-menu-btn ch-icon-container menu']").click
-
-    sleep 3
-
-    find(:xpath, "//a[@class='black-link nav-menu-category__item at-main-menu-procedures']").click
-
-    sleep 3
-
-  end
+    end
 end

@@ -6,11 +6,11 @@ feature 'TrueAutomation.IO capybara example' do
   scenario 'EC flow - navigating in top-nav menu' do
     visit 'https://ectest.trueautomation.io/flow'
 
-# login
+    # login
     find(:xpath, "//input[@id='username']").set('admin')
     find(:xpath, "//input[@id='password']").set('changeme')
     find(:xpath, "//button[text()='Login']").click
-#
+
     # find(ta('EC:picker:headerNav:logo')).click
     # find(ta('EC:headerNav:logo')).click
     find(:xpath, ta('EC:headerNav:logo', "//a[@class='logo at-logo-link']")).click

@@ -6,12 +6,13 @@ feature 'TrueAutomation.IO capybara example' do
   scenario 'EC flow - navigating in hunmburg menu' do
     visit 'https://ectest.trueautomation.io/flow'
 
-# login
+    # login
     find(:xpath, "//input[@id='username']").set('admin')
     find(:xpath, "//input[@id='password']").set('changeme')
     find(:xpath, "//button[text()='Login']").click
-#
-     sleep 3
+
+    sleep 3
+
     # find(ta('EC:picker:content:humburg')).click
     # find(ta('EC:content:humburg')).click
     find(:xpath, ta('EC:content:humburg', "//div[@class='at-main-menu-btn ch-icon-container menu']")).click
